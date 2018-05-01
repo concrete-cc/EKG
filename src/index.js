@@ -52,6 +52,7 @@ const EKG = function() {
             stack,
           },
         ]
+        console.error(`${check.name} failed because ${message}`)
       }
     }
     send(res, results.find(r => !r.passed) ? 503 : 200, results)
